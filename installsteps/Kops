@@ -1,0 +1,63 @@
+Kops
+Project URL
+https://github.com/kubernetes/kops
+
+Free DNS Service
+Sign up at http://freedns.afraid.org/
+
+Choose for subdomain hosting
+
+Enter the AWS nameservers given to you in route53 as nameservers for the subdomain
+
+http://www.dot.tk/ provides a free .tk domain name you can use and you can point it to the amazon AWS nameservers
+
+Namecheap.com often has promotions for tld’s like .co for just a couple of bucks
+
+Cluster Commands
+kops create cluster --name=kubernetes.newtech.academy --state=s3://kops-state-b429b --zones=eu-west-1a --node-count=2 --node-size=t2.micro --master-size=t2.micro --dns-zone=kubernetes.newtech.academy
+
+kops update cluster kubernetes.newtech.academy --yes --state=s3://kops-state-b429b
+
+kops delete cluster --name kubernetes.newtech.academy --state=s3://kops-state-b429b
+
+kops delete cluster --name kubernetes.newtech.academy --state=s3://kops-state-b429b --yes
+
+Kubernetes from scratch
+You can setup your cluster manually from scratch
+
+If you’re planning to deploy on AWS / Google / Azure, use the tools that are fit for these platforms
+
+If you have an unsupported cloud platform, and you still want Kubernetes, you can install it manually
+
+CoreOS + Kubernetes: ###a href="https://coreos.com/kubernetes/docs/latest/getting-started.html">https://coreos.com/kubernetes/docs/latest/getting-started.html
+
+
+Docker
+You can download Docker Engine for:
+
+Windows: https://docs.docker.com/engine/installation/windows/
+
+MacOS: https://docs.docker.com/engine/installation/mac/
+
+Linux: https://docs.docker.com/engine/installation/linux/
+
+DevOps box
+Virtualbox: http://www.virtualbox.org
+
+Vagrant: http://www.vagrantup.com
+
+DevOps box: https://github.com/wardviaene/devops-box
+
+Launch commands (in terminal / cmd / powershell):
+
+cd devops-box/
+
+vagrant up
+
+Launch commands for a plain ubuntu box:
+
+mkdir ubuntu
+
+vagrant init ubuntu/xenial64
+
+vagrant up
